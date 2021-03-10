@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: {{ include "hm-basic-webapp.prefix" . }}
+  annotations:
+    kubernetes.io/ingress.class: nginx
+spec:
+  tls:
+    {{- range $item := .Values.ssl }}
+    - secretName: "{{ $item.name }}-tls"
+      hosts:
+        - {{ $item.host }}
+    {{- end }}
+  rules:
+    {{- $prefix := include "hm-basic-webapp.prefix" . }}
+    {{- $servicePort := .Values.servicePort -}}
+    {{- range $item := .Values.ssl }}
+    - host: {{ $item.host }}
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: {{ $prefix }}
+              servicePort: {{ $servicePort }}
+    {{- end }}

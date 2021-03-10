@@ -1,0 +1,20 @@
+{{- $environment := .Values.environmentName -}}
+{{- $lets_encrypt_name := include "hm-basic-webapp.letsEncryptProductionName" . }}
+{{- range $item := .Values.ssl }}
+{{- if eq $item.manual false }}
+---
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: "{{ $environment }}-{{ $item.name }}-cert"
+spec:
+  secretName: "{{ $item.name }}-tls"
+  renewBefore: 360h # 15d
+  commonName: {{ $item.host }}
+  dnsNames:
+    - {{ $item.host }}
+  issuerRef:
+    name: {{ $lets_encrypt_name }}
+    kind: Issuer
+{{- end }}
+{{- end }}
