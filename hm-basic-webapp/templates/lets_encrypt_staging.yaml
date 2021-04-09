@@ -1,3 +1,5 @@
+{{- if .Values.ssl }}
+{{- if (eq .Values.ssl.enabled true) }}
 {{- if not (eq .Values.environmentName "prod") }}
 apiVersion: cert-manager.io/v1alpha2
 kind: Issuer
@@ -17,4 +19,6 @@ spec:
    - http01:
        ingress:
          class: nginx
+{{- end }}
+{{- end }}
 {{- end }}
