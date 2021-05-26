@@ -7,9 +7,15 @@ metadata:
 spec:
   tls:
     {{- range $item := .Values.ssl }}
-    - secretName: "{{ $item.name }}-tls"
-      hosts:
-        - {{ $item.host }}
+      {{- if (eq $item.manual true) }}
+      - secretName: "{{ $item.name }}"
+        hosts:
+          - {{ $item.host }}
+      {{ else }}
+      - secretName: "{{ $item.name }}-tls"
+        hosts:
+          - {{ $item.host }}
+      {{ end }}
     {{- end }}
   rules:
     {{- $prefix := include "hm-basic-webapp.prefix" . }}
