@@ -45,4 +45,4 @@ helm package hm-basic-webapp/
 ```
 helm repo index --url https://highmobility.github.io/helm-charts/ --merge index.yaml .
 ```
-5. Commit the zip file(s) and index.yaml and push to master
+5. Commit the zip file(s) and index.yaml and push to main
