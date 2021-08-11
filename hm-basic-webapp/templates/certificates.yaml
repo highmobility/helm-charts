@@ -6,9 +6,9 @@
 apiVersion: cert-manager.io/v1alpha2
 kind: Certificate
 metadata:
-  name: "{{ $environment }}-{{ $item.name }}-cert"
+  name: "{{ $environment }}-{{ $item.host | replace "." "-" }}-cert"
 spec:
-  secretName: "{{ $item.name }}-tls"
+  secretName: "{{ $item.tlsSecretName }}"
   renewBefore: 360h # 15d
   commonName: {{ $item.host }}
   dnsNames:
