@@ -1,1 +1,12 @@
+name: dev-helm-chart
+hostname: dev-helm-chart.local
+environmentName: dev
+image:
+  repository: dev-helm-chart
+ci:
+  deploymentTag: dev
 
+servicePort: 8080
+imagePullSecrets:
+  - name: 'regcred'
+replicas: 1
