@@ -1,0 +1,48 @@
+{{- if .Values.worker }}
+{{- if (eq .Values.worker.enabled true) }}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "hm-basic-webapp.prefix" . }}-worker
+spec:
+  replicas: {{ .Values.worker.replicas }}
+  selector:
+    matchLabels:
+      app: {{ include "hm-basic-webapp.prefix" . }}-worker
+  template:
+    metadata:
+      labels:
+        app: {{ include "hm-basic-webapp.prefix" . }}-worker
+        app.kubernetes.io/managed-by: {{.Release.Service }}
+        app.kubernetes.io/instance: {{.Release.Name }}
+      annotations:
+        date: {{ now }}
+    spec:
+      imagePullSecrets:
+        {{- .Values.imagePullSecrets | toYaml | nindent 8 }}
+      containers:
+        - image: "{{ .Values.image.repository }}:{{ .Values.ci.deploymentTag | default .Chart.AppVersion }}"
+          name: {{ include "hm-basic-webapp.prefix" . }}-worker
+          command:
+            {{- range $cmd := .Values.worker.command }}
+              - {{ $cmd }}
+            {{- end }}
+          env:
+            {{- $configName := include "hm-basic-webapp.configName" . -}}
+            {{- range $name, $_value := .Values.configMapData }}
+            - name: {{ $name }}
+              valueFrom:
+                configMapKeyRef:
+                  key: {{ $name }}
+                  name: {{ $configName }}
+            {{- end }}
+            {{- $secretName := include "hm-basic-webapp.secretName" . -}}
+            {{- range $name, $_value := .Values.secretData }}
+            - name: {{ $name }}
+              valueFrom:
+                secretKeyRef:
+                  key: {{ $name }}
+                  name: {{ $secretName }}
+            {{- end }}
+{{- end }}
+{{- end }}
