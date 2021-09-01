@@ -1,24 +1,22 @@
-{{- if .Values.ssl }}
-{{- if (eq .Values.ssl.enabled true) }}
+{{- if .Values.ingress }}
+{{- if (eq .Values.ingress.enabled true) }}
 {{- $environment := .Values.environmentName -}}
 {{- $lets_encrypt_name := include "hm-basic-webapp.letsEncryptProductionName" . }}
-{{- range $item := .Values.ssl }}
-{{- if eq $item.manual false }}
+{{- if eq .Values.ingress.acme true }}
 ---
 apiVersion: cert-manager.io/v1alpha2
 kind: Certificate
 metadata:
-  name: "{{ $environment }}-{{ $item.host | replace "." "-" }}-cert"
+  name: "{{ $environment }}-{{ .Values.hostname | replace "." "-" }}-cert"
 spec:
-  secretName: "{{ $item.tlsSecretName }}"
+  secretName: "{{ .Values.ingress.tlsSecretName }}"
   renewBefore: 360h # 15d
-  commonName: {{ $item.host }}
+  commonName: {{ .Values.hostname }}
   dnsNames:
-    - {{ $item.host }}
+    - {{ .Values.hostname }}
   issuerRef:
     name: {{ $lets_encrypt_name }}
     kind: Issuer
-{{- end }}
 {{- end }}
 {{- end }}
 {{- end }}

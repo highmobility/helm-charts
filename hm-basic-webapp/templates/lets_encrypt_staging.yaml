@@ -1,5 +1,5 @@
-{{- if .Values.ssl }}
-{{- if (eq .Values.ssl.enabled true) }}
+{{- if .Values.ingress }}
+{{- if and .Values.ingress.enabled .Values.ingress.acme  }}
 {{- if not (eq .Values.environmentName "prod") }}
 apiVersion: cert-manager.io/v1alpha2
 kind: Issuer
@@ -10,7 +10,7 @@ spec:
    # The ACME server URL
    server: https://acme-staging-v02.api.letsencrypt.org/directory
    # Email address used for ACME registration
-   email: dev@high-mobility.com
+   email: {{ .Values.ingress.acmeRegistrationEamil }}
    # Name of a secret used to store the ACME account private key
    privateKeySecretRef:
      name: {{ include "hm-basic-webapp.letsEncryptStagingName" . }}

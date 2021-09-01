@@ -1,29 +1,30 @@
 {{- if .Values.ingress }}
 {{- if (eq .Values.ingress.enabled true) }}
-apiVersion: networking.k8s.io/v1beta1
+{{- $fullName := include "hm-basic-webapp.prefix" . }}
+{{- $servicePort := .Values.servicePort -}}
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: {{ include "hm-basic-webapp.prefix" . }}
   annotations:
     kubernetes.io/ingress.class: nginx
 spec:
+  {{- if .Values.ingress.tlsSecretName }}
   tls:
-    {{- range $item := .Values.ssl }}
-    - secretName: "{{ $item.tlsSecretName }}"
-      hosts:
-        - {{ $item.host }}
-    {{- end }}
+    - hosts:
+        - {{ .Values.hostname | quote }}
+      secretName: {{ .Values.ingress.tlsSecretName }}
+  {{- end }}
+
   rules:
-    {{- $prefix := include "hm-basic-webapp.prefix" . }}
-    {{- $servicePort := .Values.servicePort -}}
-    {{- range $item := .Values.ssl }}
-    - host: {{ $item.host }}
+    - host: {{ .Values.hostname | quote }}
       http:
         paths:
-          - path: {{ $item.path }}
+          - path: {{ .Values.ingress.path }}
             backend:
-              serviceName: {{ $prefix }}
-              servicePort: {{ $servicePort }}
-    {{- end }}
+              service:
+                name: {{ $fullName }}
+                port:
+                  number: {{ $servicePort }}
 {{- end }}
 {{- end }}
