@@ -14,7 +14,6 @@ ingress:
   enabled: true
   acme: true
   acmeRegistrationEamil: nobody@localhost.local
-  host: dev.localhost.local
   path: /
   tlsSecretName: dev-localhost-local-tls
 migration:
