@@ -10,3 +10,16 @@ servicePort: 8080
 imagePullSecrets:
   - name: 'regcred'
 replicas: 1
+ingress:
+  enabled: true
+  acme: true
+  acmeRegistrationEamil: nobody@localhost.local
+  host: dev.localhost.local
+  path: /
+  tlsSecretName: dev-localhost-local-tls
+migration:
+     enabled: true
+     command:
+       - echo
+       - hello
+       - world
