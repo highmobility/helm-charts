@@ -2,7 +2,7 @@
 {{- if (eq .Values.ingress.enabled true) }}
 {{- $fullName := include "hm-basic-webapp.prefix" . }}
 {{- $servicePort := .Values.servicePort -}}
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: {{ include "hm-basic-webapp.prefix" . }}
@@ -22,7 +22,9 @@ spec:
         paths:
           - path: {{ .Values.ingress.path }}
             backend:
-              serviceName: {{ $fullName }}
-              servicePort: {{ $servicePort }}
+              service:
+                name: {{ $fullName }}
+                port:
+                  number: {{ $servicePort }}
 {{- end }}
 {{- end }}
