@@ -71,13 +71,14 @@ affinity: {}
 
 # https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/
 # Or set to empty {}
-livenessProbe:
-  exec:
-    command:
-    - cat
-    - /tmp/healthy
-  initialDelaySeconds: 5
-  periodSeconds: 5
+livenessProbe: {}
+# Example: 
+#  exec:
+#    command:
+#    - cat
+#    - /tmp/healthy
+#  initialDelaySeconds: 5
+#  periodSeconds: 5
 
 # https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/
 # Or set to empty {}
@@ -85,15 +86,14 @@ readinessProbe: {}
 
 
 migration:
-     enabled: true
-     command:
-       - echo
-       - hello
-       - world
+# Example:
+#     enabled: true
+#     command:
+#       - echo
+#       - hello
+#       - world
 
-configMapData:
-  FOO: BAR
+configMapData: {}
 
 # The value encoded to base64 automatically
-secretData:
-  SEC_FOO: BAR
+secretData: {}
