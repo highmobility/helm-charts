@@ -1,0 +1,59 @@
+{{- if .Values.migration }}
+{{- if (eq .Values.migration.enabled true) }}
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: {{ include "hm-worker.fullname" . }}-migration
+  labels:
+    app.kubernetes.io/managed-by: {{.Release.Service }}
+    app.kubernetes.io/instance: {{.Release.Name }}
+    app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
+  annotations:
+    # This is what defines this resource as a hook. Without this line, the
+    # job is considered part of the release.
+    helm.sh/hook: "post-install,post-upgrade"
+    helm.sh/hook-delete-policy: "hook-succeeded,hook-failed"
+spec:
+  template:
+    metadata:
+      name: {{ include "hm-worker.fullname" . }}-migration
+      labels:
+        app: {{ include "hm-worker.fullname" . }}
+        app.kubernetes.io/managed-by: {{.Release.Service }}
+        app.kubernetes.io/instance: {{.Release.Name }}
+      annotations:
+        date: {{ now }}
+    spec:
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      restartPolicy: Never
+      containers:
+        - name: {{ include "hm-worker.fullname" . }}-migration
+          image: "{{ .Values.image.repository }}:{{ .Values.ci.deploymentTag | default .Chart.AppVersion }}"
+          command:
+            {{- range $cmd := .Values.migration.command }}
+              - {{ $cmd }}
+            {{- end }}
+
+          env:
+            {{- $configName := include "hm-worker.configName" . -}}
+            {{- range $name, $_value := .Values.configMapData }}
+            - name: {{ $name }}
+              valueFrom:
+                configMapKeyRef:
+                  key: {{ $name }}
+                  name: {{ $configName }}
+            {{- end }}
+            {{- $secretName := include "hm-worker.secretName" . -}}
+            {{- range $name, $_value := .Values.secretData }}
+            - name: {{ $name }}
+              valueFrom:
+                secretKeyRef:
+                  key: {{ $name }}
+                  name: {{ $secretName }}
+            {{- end }}
+{{- end }}
+{{- end }}
+
