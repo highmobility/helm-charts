@@ -37,6 +37,10 @@ spec:
               containerPort: 80
               protocol: TCP
           env:
+            - name: K8S_POD_IP
+              valueFrom:
+                fieldRef:
+                  fieldPath: status.podIP
             {{- $configName := include "hm-worker.configName" . -}}
             {{- range $name, $_value := .Values.configMapData }}
             - name: {{ $name }}
