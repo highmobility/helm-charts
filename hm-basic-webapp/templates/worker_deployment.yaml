@@ -28,6 +28,8 @@ spec:
               - {{ $cmd }}
             {{- end }}
           env:
+            - name: WORKER
+              value: "true"
             {{- $configName := include "hm-basic-webapp.configName" . -}}
             {{- range $name, $_value := .Values.configMapData }}
             - name: {{ $name }}
