@@ -44,5 +44,7 @@ spec:
                   key: {{ $name }}
                   name: {{ $secretName }}
             {{- end }}
+            - name: WORKER
+              value: "true"
 {{- end }}
 {{- end }}
