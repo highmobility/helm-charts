@@ -20,7 +20,7 @@ spec:
       labels:
         {{- include "hm-worker.selectorLabels" . | nindent 8 }}
     spec:
-      {{- with .Values.image.imagePullSecrets }}
+      {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
