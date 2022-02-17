@@ -13,7 +13,7 @@ replicas: 1
 ingress:
   enabled: false
   acme: false
-  acmeRegistrationEamil: nobody@localhost.local
+  acmeRegistrationEmail: nobody@localhost.local
   path: /
   tlsSecretName: dev-localhost-local-tls
 migration:

@@ -10,7 +10,7 @@ spec:
    # The ACME server URL
    server: https://acme-staging-v02.api.letsencrypt.org/directory
    # Email address used for ACME registration
-   email: {{ .Values.ingress.acmeRegistrationEamil }}
+   email: {{ .Values.ingress.acmeRegistrationEmail }}
    # Name of a secret used to store the ACME account private key
    privateKeySecretRef:
      name: {{ include "hm-basic-webapp.letsEncryptStagingName" . }}
