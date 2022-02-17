@@ -11,9 +11,9 @@ imagePullSecrets:
   - name: 'regcred'
 replicas: 1
 ingress:
-  enabled: true
-  acme: true
-  acmeRegistrationEamil: nobody@localhost.local
+  enabled: false
+  acme: false
+  acmeRegistrationEmail: nobody@localhost.local
   path: /
   tlsSecretName: dev-localhost-local-tls
 migration:
