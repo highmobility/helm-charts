@@ -6,7 +6,7 @@ spec:
   ports:
     - name: http
       port: {{ .Values.servicePort }}
-      targetPort: {{ .Values.servicePort }}
+      targetPort: {{ .Values.containerPort }}
   selector:
     app: {{ include "hm-basic-webapp.prefix" . }}
   type: ClusterIP
