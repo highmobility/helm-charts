@@ -2,7 +2,7 @@
 
 ## [2.2.0] - 2022-03-07
 
-### Change
+### Breaking Changes
 * Make ServicePort and ContainerPort configurable.
 This could cause old configs without containerPort config to fail! Review the deployment in staging before deploying to prod.
 
