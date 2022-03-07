@@ -6,7 +6,8 @@ image:
 ci:
   deploymentTag: dev
 
-servicePort: 8080
+servicePort: 80
+containerPort: 8080
 imagePullSecrets:
   - name: 'regcred'
 replicas: 1

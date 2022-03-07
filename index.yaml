@@ -23,7 +23,7 @@ entries:
     version: 2.1.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-03-03T18:42:07.562882+01:00"
+    created: "2022-03-07T13:00:02.906912+01:00"
     description: A Helm chart for Kubernetes
     digest: b6d87b9154c49b84711b174af0563057db49d8e34b5e3f03ba747a87aa08b8a8
     name: hm-basic-webapp

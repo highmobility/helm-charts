@@ -33,16 +33,17 @@ commit `Chart.*` files and `charts/` directory.
 
 In order to udpate the helm packages, follow these steps:
 1. Bump the helm application version
-2. Run lint:
+2. Update the CHANGELOG.md in the chart
+3. Run lint:
 ```
 helm lint hm-basic-webapp
 ```
-3. Build zip file:
+4. Build zip file:
 ```
 helm package hm-basic-webapp/
 ```
-4. update the `index.yaml` file:
+5. update the `index.yaml` file:
 ```
 helm repo index --url https://highmobility.github.io/helm-charts/ --merge index.yaml .
 ```
-5. Commit the zip file(s) and index.yaml and push to main
+6. Commit the zip file(s) and index.yaml and push to main
