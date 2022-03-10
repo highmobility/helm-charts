@@ -2,6 +2,7 @@
 {{- if (eq .Values.worker.enabled true) }}
 {{- range $worker := .Values.worker.instances }}
 {{- with $ }}
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
