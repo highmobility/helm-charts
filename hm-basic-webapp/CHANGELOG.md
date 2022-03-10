@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.0] - 2022-03-10
+### Added
+* Support to multiple workers
+
+### Breaking Changes
+* To support multiple workers, the workers key in the values now is a list of workers. Please check the `values.yaml` for an example.
+
 ## [2.2.0] - 2022-03-07
 
 ### Breaking Changes
