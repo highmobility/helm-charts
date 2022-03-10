@@ -30,8 +30,6 @@ spec:
               - {{ $cmd }}
             {{- end }}
           env:
-            - name: WORKER
-              value: "true"
             {{- range $worker.env }}
             - name: {{ .name }}
               value: {{ .value }}
