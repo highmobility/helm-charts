@@ -3,6 +3,16 @@ entries:
   hm-basic-webapp:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2022-03-10T14:39:40.988873+01:00"
+    description: A Helm chart for Kubernetes
+    digest: 87d06b98bba11a0400395726e706ad0bd14b6875a4fff841089a112628d8757a
+    name: hm-basic-webapp
+    type: application
+    urls:
+    - https://highmobility.github.io/helm-charts/hm-basic-webapp-3.0.1.tgz
+    version: 3.0.1
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2022-03-10T10:54:59.747214+01:00"
     description: A Helm chart for Kubernetes
     digest: c152e15ac320f20ef4b8002dbec8690f6851eecae373b7e279bd2f1fc8eb3a02
@@ -102,4 +112,4 @@ entries:
     urls:
     - https://highmobility.github.io/helm-charts/hm-worker-0.1.0.tgz
     version: 0.1.0
-generated: "2022-03-10T10:54:59.744209+01:00"
+generated: "2022-03-10T14:39:40.988873+01:00"
