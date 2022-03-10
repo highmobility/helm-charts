@@ -23,3 +23,23 @@ migration:
        - echo
        - hello
        - world
+worker:
+  enabled: true
+  instances:
+    - name: foo
+      replicas: 1
+      command:
+        - echo
+        - hello
+        - world
+    - name: bar
+      replicas: 2
+      command:
+        - echo
+        - hello
+        - world
+      env:
+        - name: FOO
+          value: FUU
+        - name: BAR
+          value: BAZ

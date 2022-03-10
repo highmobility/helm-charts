@@ -1,18 +1,20 @@
 {{- if .Values.worker }}
 {{- if (eq .Values.worker.enabled true) }}
+{{- range $worker := .Values.worker.instances }}
+{{- with $ }}
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "hm-basic-webapp.prefix" . }}-worker
+  name: {{ include "hm-basic-webapp.prefix" . }}-{{ $worker.name }}-worker
 spec:
-  replicas: {{ .Values.worker.replicas }}
+  replicas: {{ $worker.replicas }}
   selector:
     matchLabels:
-      app: {{ include "hm-basic-webapp.prefix" . }}-worker
+      app: {{ include "hm-basic-webapp.prefix" . }}-{{ $worker.name }}-worker
   template:
     metadata:
       labels:
-        app: {{ include "hm-basic-webapp.prefix" . }}-worker
+        app: {{ include "hm-basic-webapp.prefix" . }}-{{ $worker.name }}-worker
         app.kubernetes.io/managed-by: {{.Release.Service }}
         app.kubernetes.io/instance: {{.Release.Name }}
       annotations:
@@ -22,14 +24,18 @@ spec:
         {{- .Values.imagePullSecrets | toYaml | nindent 8 }}
       containers:
         - image: "{{ .Values.image.repository }}:{{ .Values.ci.deploymentTag | default .Chart.AppVersion }}"
-          name: {{ include "hm-basic-webapp.prefix" . }}-worker
+          name: {{ include "hm-basic-webapp.prefix" . }}-{{ $worker.name }}-worker
           command:
-            {{- range $cmd := .Values.worker.command }}
+            {{- range $cmd := $worker.command }}
               - {{ $cmd }}
             {{- end }}
           env:
             - name: WORKER
               value: "true"
+            {{- range $worker.env }}
+            - name: {{ .name }}
+              value: {{ .value }}
+            {{- end }}
             {{- $configName := include "hm-basic-webapp.configName" . -}}
             {{- range $name, $_value := .Values.configMapData }}
             - name: {{ $name }}
@@ -46,5 +52,7 @@ spec:
                   key: {{ $name }}
                   name: {{ $secretName }}
             {{- end }}
+{{- end }}
+{{- end }}
 {{- end }}
 {{- end }}
