@@ -1,7 +1,7 @@
 # Changelog
 
 ## [3.1.1] - 2022-03-11
-### Breaking Chang
+### Breaking Changes
 * Disable worker and migration configs by default
 
 
