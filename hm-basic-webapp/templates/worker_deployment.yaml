@@ -31,6 +31,10 @@ spec:
               - {{ $cmd }}
             {{- end }}
           env:
+            - name: K8S_POD_IP
+              valueFrom:
+                fieldRef:
+                  fieldPath: status.podIP
             {{- range $worker.env }}
             - name: {{ .name }}
               value: {{ .value }}
