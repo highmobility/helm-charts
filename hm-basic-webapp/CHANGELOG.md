@@ -1,5 +1,10 @@
 # Changelog
 
+## [3.1.1] - 2022-03-11
+### Breaking Chang
+* Disable worker and migration configs by default
+
+
 ## [3.1.0] - 2022-03-11
 ### Added
 * Add `K8S_POD_IP` env var which refers to the pod's IP addr
