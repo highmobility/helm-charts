@@ -18,13 +18,13 @@ ingress:
   path: /
   tlsSecretName: dev-localhost-local-tls
 migration:
-     enabled: true
-     command:
-       - echo
-       - hello
-       - world
+  enabled: false
+  command:
+    - echo
+    - hello
+    - world
 worker:
-  enabled: true
+  enabled: false
   instances:
     - name: foo
       replicas: 1
