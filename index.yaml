@@ -3,6 +3,16 @@ entries:
   hm-basic-webapp:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2022-03-11T11:00:15.824763+01:00"
+    description: Web Server and Workers with optional ingress and ACME
+    digest: a6106446d16a8c1355d34d6cfb685efb041690443474f7149a15f4375cb87a53
+    name: hm-basic-webapp
+    type: application
+    urls:
+    - https://highmobility.github.io/helm-charts/hm-basic-webapp-3.1.0.tgz
+    version: 3.1.0
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2022-03-10T14:39:40.988873+01:00"
     description: A Helm chart for Kubernetes
     digest: 87d06b98bba11a0400395726e706ad0bd14b6875a4fff841089a112628d8757a

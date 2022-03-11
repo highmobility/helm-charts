@@ -1,5 +1,14 @@
 # Changelog
 
+## [3.1.0] - 2022-03-11
+### Added
+* Add `K8S_POD_IP` env var which refers to the pod's IP addr
+
+## [3.0.1] - 2022-03-10
+### Fix
+* Fix issue with multiple worker deployment using the same template file
+
+
 ## [3.0.0] - 2022-03-10
 ### Added
 * Support to multiple workers
