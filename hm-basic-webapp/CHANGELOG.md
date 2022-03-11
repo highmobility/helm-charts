@@ -1,5 +1,10 @@
 # Changelog
 
+## [3.2.0] - 2022-03-11
+### Added
+
+* Support annotations configuration for ingress.
+
 ## [3.1.1] - 2022-03-11
 ### Breaking Changes
 * Disable worker and migration configs by default
