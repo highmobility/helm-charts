@@ -17,6 +17,8 @@ ingress:
   acmeRegistrationEmail: nobody@localhost.local
   path: /
   tlsSecretName: dev-localhost-local-tls
+  annotations:
+    kubernetes.io/ingress.class: nginx
 migration:
   enabled: false
   command:
