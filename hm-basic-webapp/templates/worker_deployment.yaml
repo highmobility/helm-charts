@@ -37,7 +37,7 @@ spec:
                   fieldPath: status.podIP
             {{- range $worker.env }}
             - name: {{ .name }}
-              value: {{ .value }}
+              value: "{{ .value }}"
             {{- end }}
             {{- $configName := include "hm-basic-webapp.configName" . -}}
             {{- range $name, $_value := .Values.configMapData }}

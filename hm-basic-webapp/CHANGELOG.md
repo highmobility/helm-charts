@@ -1,5 +1,9 @@
 # Changelog
 
+## [3.2.1] - 2022-03-16
+### Fix
+* Quote environment variable values passed to worker deployment
+
 ## [3.2.0] - 2022-03-11
 ### Added
 
