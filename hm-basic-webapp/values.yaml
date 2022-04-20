@@ -27,6 +27,7 @@ migration:
     - world
 worker:
   enabled: false
+  deploymentStrategy: RollingUpdate
   instances:
     - name: foo
       replicas: 1

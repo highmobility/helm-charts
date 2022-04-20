@@ -9,6 +9,8 @@ metadata:
   name: {{ include "hm-basic-webapp.prefix" . }}-{{ $worker.name }}-worker
 spec:
   replicas: {{ $worker.replicas }}
+  strategy:
+    type: "{{ .Values.worker.deploymentStrategy }}"
   selector:
     matchLabels:
       app: {{ include "hm-basic-webapp.prefix" . }}-{{ $worker.name }}-worker

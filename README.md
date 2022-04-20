@@ -31,7 +31,7 @@ commit `Chart.*` files and `charts/` directory.
 
 ## Build packages and push to public page
 
-In order to udpate the helm packages, follow these steps:
+In order to update the helm packages, follow these steps:
 1. Bump the helm application version
 2. Update the CHANGELOG.md in the chart
 3. Run lint:

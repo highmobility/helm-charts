@@ -1,5 +1,10 @@
 # Changelog
 
+## [3.3.0] - 2022-04-20
+### Added
+
+* Option to configure `deploymentStrategy` for workers (either `RollingUpdate` or `Recreate`)
+
 ## [3.2.1] - 2022-03-16
 ### Fix
 * Quote environment variable values passed to worker deployment
