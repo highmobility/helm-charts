@@ -3,9 +3,9 @@ entries:
   hm-basic-webapp:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-05-24T16:55:14.409192+02:00"
+    created: "2022-05-24T17:21:53.836527+02:00"
     description: Web Server and Workers with optional ingress and ACME
-    digest: aa721dbd93d9367d28bdb062989d05d9419765f6f97c534577d838bcc2d41367
+    digest: b9dcc5168e43033a6499e360911f84ee04d5930c0b7ab6399357d7a423fff646
     name: hm-basic-webapp
     type: application
     urls:

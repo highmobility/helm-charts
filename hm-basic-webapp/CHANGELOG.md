@@ -4,6 +4,7 @@
 ### Added
 
 * Option to configure `resources` for the web pod
+* Option to configure `autoscale` for the web pod using hpa
 
 ## [3.3.0] - 2022-04-20
 ### Added
