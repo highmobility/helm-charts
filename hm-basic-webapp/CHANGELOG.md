@@ -1,5 +1,10 @@
 # Changelog
 
+## [3.4.0] - 2022-05-24
+### Added
+
+* Option to configure `resources` for the web pod
+
 ## [3.3.0] - 2022-04-20
 ### Added
 

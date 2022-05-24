@@ -44,3 +44,6 @@ spec:
                   key: {{ $name }}
                   name: {{ $secretName }}
             {{- end }}
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+
