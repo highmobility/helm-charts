@@ -1,5 +1,10 @@
 # Changelog
 
+## [3.4.1] - 2022-05-30
+### Fixed
+
+* Option to configure `resources` for the worker pods
+
 ## [3.4.0] - 2022-05-24
 ### Added
 

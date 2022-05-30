@@ -57,6 +57,10 @@ spec:
                   key: {{ $name }}
                   name: {{ $secretName }}
             {{- end }}
+          {{- if $worker.resources }}
+          resources:
+            {{- toYaml $worker.resources | nindent 12 }}
+          {{- end }}
 {{- end }}
 {{- end }}
 {{- end }}
