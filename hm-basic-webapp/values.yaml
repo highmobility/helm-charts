@@ -58,6 +58,14 @@ worker:
         - world
     - name: bar
       replicas: 2
+      resources: {}
+      # resources:
+      #     requests:
+      #       cpu: 300m
+      #       memory: 150Mi
+      #     limits:
+      #       cpu: 600m
+      #       memory: 300Mi
       command:
         - echo
         - hello
