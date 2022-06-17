@@ -7,5 +7,5 @@ appVersion: "1.16.0"
 
 dependencies:
 - name: hm-basic-webapp
-  version: 3.4.1
+  version: 3.5.0
   repository: file://../../../hm-basic-webapp

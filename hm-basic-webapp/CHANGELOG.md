@@ -1,5 +1,23 @@
 # Changelog
 
+## [3.5.0] - 2022-06-17
+### Added
+
+* Option to set `image` for the migration pod
+```yaml
+ci:
+  deploymentTag: foo
+  deploymentMigrationTag: bar
+
+migration:
+    enabled: true
+    image:
+      repository: sample-migration
+    command:
+      - ruby
+      - migration.rb
+```
+
 ## [3.4.1] - 2022-05-30
 ### Fixed
 

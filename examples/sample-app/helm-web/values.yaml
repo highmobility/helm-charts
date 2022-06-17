@@ -8,6 +8,10 @@ hm-basic-webapp:
     - name: 'regcred'
   replicas: 1
 
+  ci:
+    deploymentTag: foo
+    deploymentMigrationTag: bar
+
   ingress:
     enabled: false
     acme: false
