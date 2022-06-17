@@ -1,0 +1,47 @@
+hm-basic-webapp:
+  name: sample-app
+  image:
+    repository: sample-app
+  servicePort: 80
+  containerPort: 9292
+  imagePullSecrets:
+    - name: 'regcred'
+  replicas: 1
+
+  ingress:
+    enabled: false
+    acme: false
+
+  environmentName: develop
+
+  worker:
+    enabled: true
+    instances:
+      - name: worker1
+        replicas: 1
+        command:
+          - ruby
+          - worker.rb
+      - name: worker2
+        replicas: 1
+        command:
+          - ruby
+          - worker.rb
+
+  migration:
+    enabled: true
+    image:
+      repository: sample-migration
+    command:
+      - ruby
+      - migration.rb
+
+### Config Map
+  configMapData:
+    BASIC_ENV_A: 'BASIC_A'
+    BASIC_ENV_B: 'BASIC_B'
+
+### Secret
+  secretData:
+    SECRET_ENV_A: 'SECRET_A'
+    SECRET_ENV_B: 'SECRET_B'
