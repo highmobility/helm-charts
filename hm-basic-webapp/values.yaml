@@ -5,6 +5,8 @@ image:
   repository: dev-helm-chart
 ci:
   deploymentTag: dev
+# In case migration image is set
+#  deploymentMigrationTag: dev
 
 servicePort: 80
 containerPort: 8080
@@ -21,6 +23,8 @@ ingress:
     kubernetes.io/ingress.class: nginx
 migration:
   enabled: false
+#  image:
+#    repository: sample-migration
   command:
     - echo
     - hello

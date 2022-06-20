@@ -29,7 +29,11 @@ spec:
       restartPolicy: Never
       containers:
         - name: {{ include "hm-basic-webapp.prefix" . }}-migration
+        {{- if .Values.migration.image }}
+          image: "{{ .Values.migration.image.repository }}:{{ .Values.ci.deploymentMigrationTag | default .Chart.AppVersion }}"
+        {{- else }}
           image: "{{ .Values.image.repository }}:{{ .Values.ci.deploymentTag | default .Chart.AppVersion }}"
+        {{- end }}
           command:
             {{- range $cmd := .Values.migration.command }}
               - {{ $cmd }}
