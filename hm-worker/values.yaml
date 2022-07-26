@@ -74,7 +74,7 @@ affinity: {}
 # https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/
 # Or set to empty {}
 livenessProbe: {}
-# Example: 
+# Example:
 #  exec:
 #    command:
 #    - cat
@@ -86,6 +86,7 @@ livenessProbe: {}
 # Or set to empty {}
 readinessProbe: {}
 
+headlessService: false
 
 migration:
 # Example:

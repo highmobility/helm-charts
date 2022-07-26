@@ -1,0 +1,12 @@
+{{- if .Values.headlessService }}
+{{- if (eq .Values.headlessService true) }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "hm-worker.headlessServiceName" . }}
+spec:
+  clusterIP: None
+  selector:
+    {{- include "hm-worker.selectorLabels" . | nindent 4 }}
+{{- end }}
+{{- end }}
