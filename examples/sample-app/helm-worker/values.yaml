@@ -1,0 +1,28 @@
+hm-worker:
+  image:
+    repository: sample-app
+  imagePullSecrets:
+    - name: regcred
+
+  ci:
+    deploymentTag: worker
+
+  environmentName: develop
+
+  headlessService: true
+
+  migration:
+    enabled: true
+    command:
+      - ruby
+      - migration.rb
+
+### Config Map
+  configMapData:
+    BASIC_ENV_A: 'BASIC_A'
+    BASIC_ENV_B: 'BASIC_B'
+
+### Secret
+  secretData:
+    SECRET_ENV_A: 'SECRET_A'
+    SECRET_ENV_B: 'SECRET_B'

@@ -69,3 +69,7 @@ Create the name of the service account to use
 {{- define "hm-worker.secretName" -}}
 {{- printf "%s-%s" (include "hm-worker.fullname" .) "secret" -}}
 {{- end -}}
+
+{{- define "hm-worker.headlessServiceName" -}}
+{{- printf "%s-%s" (include "hm-worker.fullname" .) "nodes" -}}
+{{- end -}}
