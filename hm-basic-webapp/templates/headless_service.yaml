@@ -1,0 +1,12 @@
+{{- if .Values.headlessService }}
+{{- if (eq .Values.headlessService true) }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "hm-basic-webapp.prefix" . }}-nodes
+spec:
+  clusterIP: None
+  selector:
+    app: {{ include "hm-basic-webapp.prefix" . }}
+{{- end }}
+{{- end }}

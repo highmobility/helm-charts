@@ -1,5 +1,10 @@
 # Changelog
 
+## [3.6.0] - 2022-08-25
+### Add
+
+* Option to enable [headless service](https://kubernetes.io/docs/concepts/services-networking/service/#headless-services).
+
 ## [3.5.0] - 2022-06-17
 ### Added
 
