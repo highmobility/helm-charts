@@ -16,6 +16,7 @@ hm-basic-webapp:
     enabled: false
     acme: false
 
+  headlessService: false
   environmentName: develop
 
   worker:

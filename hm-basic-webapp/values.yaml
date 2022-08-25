@@ -21,6 +21,7 @@ ingress:
   tlsSecretName: dev-localhost-local-tls
   annotations:
     kubernetes.io/ingress.class: nginx
+headlessService: false
 migration:
   enabled: false
 #  image:
