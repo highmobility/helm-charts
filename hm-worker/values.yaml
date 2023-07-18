@@ -88,6 +88,10 @@ readinessProbe: {}
 
 headlessService: false
 
+metrics:
+  enabled: false
+  port: 1234
+
 migration:
 # Example:
 #     enabled: true
