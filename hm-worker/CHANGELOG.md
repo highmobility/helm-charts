@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.3.0] - 2023-07-18
+### Add
+
+* Option to enable metrics port on deployment resource.
+
+
 ## [1.2.0] - 2022-07-26
 ### Add
 

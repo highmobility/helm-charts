@@ -38,6 +38,11 @@ spec:
             - name: http
               containerPort: 80
               protocol: TCP
+            {{- if .Values.metrics.enabled }}
+            - name: metrics
+              containerPort: {{ .Values.metrics.port }}
+              protocol: TCP
+            {{- end }}
           env:
             - name: K8S_POD_IP
               valueFrom:

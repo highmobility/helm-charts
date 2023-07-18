@@ -11,6 +11,10 @@ hm-worker:
 
   headlessService: true
 
+  metrics:
+    enabled: false
+    port: 2002
+
   migration:
     enabled: true
     command:
