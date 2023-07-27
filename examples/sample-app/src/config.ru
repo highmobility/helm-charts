@@ -1,1 +1,1 @@
-run ->(env) { [200, {"Content-Type" => "text/html"}, ["Hello There!"]] }
+run { |_env| [200, {}, ["Hello There!"]] }
