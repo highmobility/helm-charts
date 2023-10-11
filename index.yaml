@@ -3,7 +3,7 @@ entries:
   hm-basic-webapp:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-11T20:46:30.240843744+02:00"
+    created: "2022-08-25T12:02:11.088694+02:00"
     description: Web Server and Workers with optional ingress and ACME
     digest: e3ff184e79e8a4c64beab417c570f740db5dbda95f0f7c46be5c7a4cd02c4a44
     name: hm-basic-webapp
@@ -13,7 +13,7 @@ entries:
     version: 3.6.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-11T20:46:30.2403021+02:00"
+    created: "2022-06-17T11:46:44.86398+02:00"
     description: Web Server and Workers with optional ingress and ACME
     digest: 8f5828c28f7e008e27bdb7d55c61065fce283fdb1e97a558e9ca21b4a3b39d37
     name: hm-basic-webapp
@@ -23,7 +23,7 @@ entries:
     version: 3.5.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-11T20:46:30.239759173+02:00"
+    created: "2022-05-30T11:48:05.809175+02:00"
     description: Web Server and Workers with optional ingress and ACME
     digest: 93a8d662c08acfa415e1f2aaad4e8a751cb71935e483e9a53ed5eef288ae2e64
     name: hm-basic-webapp
@@ -33,7 +33,7 @@ entries:
     version: 3.4.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-11T20:46:30.239231695+02:00"
+    created: "2022-05-24T17:21:53.836527+02:00"
     description: Web Server and Workers with optional ingress and ACME
     digest: b9dcc5168e43033a6499e360911f84ee04d5930c0b7ab6399357d7a423fff646
     name: hm-basic-webapp
@@ -43,7 +43,7 @@ entries:
     version: 3.4.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-11T20:46:30.238711257+02:00"
+    created: "2022-04-20T12:39:26.200745+03:00"
     description: Web Server and Workers with optional ingress and ACME
     digest: 8b875a268ca0614d014caf04c4a380ef783d701e36bf0c09b50e8c3d3e4db21d
     name: hm-basic-webapp
@@ -53,7 +53,7 @@ entries:
     version: 3.3.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-11T20:46:30.23824871+02:00"
+    created: "2022-03-16T10:17:34.562406+01:00"
     description: Web Server and Workers with optional ingress and ACME
     digest: b60ce0d6e11e8c3e51db0495998cc6bbf573b9863c2450a36bcd613e1103a478
     name: hm-basic-webapp
@@ -63,7 +63,7 @@ entries:
     version: 3.2.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-11T20:46:30.237801778+02:00"
+    created: "2022-03-11T17:06:56.84864+01:00"
     description: Web Server and Workers with optional ingress and ACME
     digest: a0fc44578a5989bc6eac2647f19c2fafcde25d0db9a008d0b63d960fc483a0da
     name: hm-basic-webapp
@@ -73,7 +73,7 @@ entries:
     version: 3.2.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-11T20:46:30.23735053+02:00"
+    created: "2022-03-11T15:12:34.124968+01:00"
     description: Web Server and Workers with optional ingress and ACME
     digest: 27ea5c6ae440ec24732628a71304ec5c1e95c00cd9023d4817eaa31384900518
     name: hm-basic-webapp
@@ -83,7 +83,7 @@ entries:
     version: 3.1.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-11T20:46:30.236952098+02:00"
+    created: "2022-03-11T11:00:15.824763+01:00"
     description: Web Server and Workers with optional ingress and ACME
     digest: a6106446d16a8c1355d34d6cfb685efb041690443474f7149a15f4375cb87a53
     name: hm-basic-webapp
@@ -93,7 +93,7 @@ entries:
     version: 3.1.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-11T20:46:30.23655603+02:00"
+    created: "2022-03-10T14:39:40.988873+01:00"
     description: A Helm chart for Kubernetes
     digest: 87d06b98bba11a0400395726e706ad0bd14b6875a4fff841089a112628d8757a
     name: hm-basic-webapp
@@ -103,7 +103,7 @@ entries:
     version: 3.0.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-11T20:46:30.23615153+02:00"
+    created: "2022-03-10T10:54:59.747214+01:00"
     description: A Helm chart for Kubernetes
     digest: c152e15ac320f20ef4b8002dbec8690f6851eecae373b7e279bd2f1fc8eb3a02
     name: hm-basic-webapp
@@ -113,17 +113,7 @@ entries:
     version: 3.0.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-11T20:46:30.235747295+02:00"
-    description: A Helm chart for Kubernetes
-    digest: ddbb7da3b83053f94222d753c3a4bf4b8c639ad1c4b194880cf7ba25256a1957
-    name: hm-basic-webapp
-    type: application
-    urls:
-    - https://highmobility.github.io/helm-charts/hm-basic-webapp-2.2.0.tgz
-    version: 2.2.0
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2023-10-11T20:46:30.235265138+02:00"
+    created: "2022-03-03T18:42:07.563786+01:00"
     description: A Helm chart for Kubernetes
     digest: c60f37eebf19edc5ed3168942e7c002f285886726d7e03bf23bd7c06993a0f57
     name: hm-basic-webapp
@@ -133,7 +123,7 @@ entries:
     version: 2.1.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-11T20:46:30.234712121+02:00"
+    created: "2022-03-03T18:42:07.563379+01:00"
     description: A Helm chart for Kubernetes
     digest: 6657407173bd387691c7aa3db6687de31ca69b16c2736417c50661ed43351342
     name: hm-basic-webapp
@@ -143,7 +133,7 @@ entries:
     version: 2.1.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-11T20:46:30.234171376+02:00"
+    created: "2022-03-07T13:00:02.906912+01:00"
     description: A Helm chart for Kubernetes
     digest: b6d87b9154c49b84711b174af0563057db49d8e34b5e3f03ba747a87aa08b8a8
     name: hm-basic-webapp
@@ -153,7 +143,7 @@ entries:
     version: 2.0.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-11T20:46:30.2336246+02:00"
+    created: "2022-03-03T18:42:07.562303+01:00"
     description: A Helm chart for Kubernetes
     digest: aa5763d6faa59b3782185afee191979aea2cc17cdb7f21ef126a2c5ab0da11d5
     name: hm-basic-webapp
@@ -163,7 +153,7 @@ entries:
     version: 2.0.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-11T20:46:30.233029468+02:00"
+    created: "2022-03-03T18:42:07.561938+01:00"
     description: A Helm chart for Kubernetes
     digest: fc4d01f2063d9c3d7e8ed82278aed683e1c3047adeead081095893ea6c19f33f
     name: hm-basic-webapp
@@ -173,7 +163,7 @@ entries:
     version: 1.0.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-11T20:46:30.23250651+02:00"
+    created: "2022-03-03T18:42:07.561606+01:00"
     description: A Helm chart for Kubernetes
     digest: 0cb557490485b11b1c5fd2071bb0e2b341b9d5e1188671c01aa33a0de36ad006
     name: hm-basic-webapp
@@ -184,7 +174,7 @@ entries:
   hm-worker:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-11T20:46:30.245880904+02:00"
+    created: "2023-10-11T20:52:13.763472784+02:00"
     description: A Helm chart for running worker jobs without any HTTP service
     digest: 3bda3d1090f14bef7888bb521a66026623af6136fc306f052535c10337436390
     name: hm-worker
@@ -194,7 +184,7 @@ entries:
     version: 1.3.2
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-11T20:46:30.245482323+02:00"
+    created: "2023-08-08T15:16:14.547527+02:00"
     description: A Helm chart for running worker jobs without any HTTP service
     digest: 932f733879969eae462ec506b472c6d617676c2709355fa79fd80da4ca02e25b
     name: hm-worker
@@ -204,7 +194,7 @@ entries:
     version: 1.3.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-11T20:46:30.245034649+02:00"
+    created: "2023-07-18T12:14:10.688828+02:00"
     description: A Helm chart for running worker jobs without any HTTP service
     digest: 35b270b8344836edc40976ece047d50d756042e99d712fff95ee0e76d26b2063
     name: hm-worker
@@ -214,7 +204,7 @@ entries:
     version: 1.3.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-11T20:46:30.244620332+02:00"
+    created: "2022-07-26T11:27:29.261495+02:00"
     description: A Helm chart for running worker jobs without any HTTP service
     digest: 193921b66dc87664772da943a6367d188369c64173cf529e9c8dfc6fe9a61719
     name: hm-worker
@@ -224,7 +214,7 @@ entries:
     version: 1.2.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-11T20:46:30.244066647+02:00"
+    created: "2022-05-04T13:40:41.58705+02:00"
     description: A Helm chart for running worker jobs without any HTTP service
     digest: 22124d63aea3996d9533cdbc0e76f2355055374af37fc20fee7b22416896e242
     name: hm-worker
@@ -234,7 +224,7 @@ entries:
     version: 1.1.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-11T20:46:30.243390035+02:00"
+    created: "2022-03-03T18:42:07.56504+01:00"
     description: A Helm chart for running worker jobs without any HTTP service
     digest: b204a4fbb4aa6df2d8abd9243fd01c0d82fcc10572d610b4215fb62513d8031d
     name: hm-worker
@@ -244,7 +234,7 @@ entries:
     version: 1.0.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-11T20:46:30.242789161+02:00"
+    created: "2022-03-03T18:42:07.56462+01:00"
     description: A Helm chart for running worker jobs without any HTTP service
     digest: 24d14170fcaa3ecb705f6dcf7ea3390e98617fac08167e918175b90136fcf2af
     name: hm-worker
@@ -254,7 +244,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-11T20:46:30.241943018+02:00"
+    created: "2022-03-03T18:42:07.564204+01:00"
     description: A Helm chart for running worker jobs without any HTTP service
     digest: b53db721f187a96128067ccee117a71bb43093ef4a8d47bec1177927c0cbb06d
     name: hm-worker
@@ -262,4 +252,4 @@ entries:
     urls:
     - https://highmobility.github.io/helm-charts/hm-worker-0.1.0.tgz
     version: 0.1.0
-generated: "2023-10-11T20:46:30.231897632+02:00"
+generated: "2023-07-18T12:14:10.662086+02:00"

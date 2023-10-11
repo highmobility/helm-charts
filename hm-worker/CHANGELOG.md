@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.3.2] - 2023-10-11
+### Changed
+
+* chore: hm-worker memory limit to 512M
+
 
 ## [1.3.1] - 2023-08-08
 ### Changed
