@@ -3,6 +3,16 @@ entries:
   hm-basic-webapp:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2023-11-08T12:33:12.107258Z"
+    description: Web Server and Workers with optional ingress and ACME
+    digest: 209eae4c16f7d8d036e2563670e54fb0431238b2ed7d750860cf51c0d336e4c7
+    name: hm-basic-webapp
+    type: application
+    urls:
+    - https://highmobility.github.io/helm-charts/hm-basic-webapp-3.7.0.tgz
+    version: 3.7.0
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2022-08-25T12:02:11.088694+02:00"
     description: Web Server and Workers with optional ingress and ACME
     digest: e3ff184e79e8a4c64beab417c570f740db5dbda95f0f7c46be5c7a4cd02c4a44
@@ -242,4 +252,4 @@ entries:
     urls:
     - https://highmobility.github.io/helm-charts/hm-worker-0.1.0.tgz
     version: 0.1.0
-generated: "2023-07-18T12:14:10.662086+02:00"
+generated: "2023-11-08T12:33:12.092556Z"
