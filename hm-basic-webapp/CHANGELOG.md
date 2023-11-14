@@ -1,5 +1,10 @@
 # Changelog
 
+## [3.7.0] - 2022-08-25
+### Add
+
+* Option to enable [liveness and readiness probes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/).
+
 ## [3.6.0] - 2022-08-25
 ### Add
 

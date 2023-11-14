@@ -43,6 +43,20 @@ resources: {}
   #   cpu: 100m
   #   memory: 128Mi
 
+# https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/
+# Or set to empty {}
+livenessProbe: {}
+# Example:
+#  exec:
+#    command:
+#    - cat
+#    - /tmp/healthy
+#  initialDelaySeconds: 5
+#  periodSeconds: 5
+
+# https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/
+# Or set to empty {}
+readinessProbe: {}
 
 autoscaling:
   enabled: false
