@@ -1,6 +1,12 @@
 # Changelog
 
 
+## [1.4.0] - 2023-12-08
+### Changed
+
+* Shorten the name of resouces by removing `hm-worker` at the end of each resource
+
+
 ## [1.3.1] - 2023-08-08
 ### Changed
 
