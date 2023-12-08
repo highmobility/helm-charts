@@ -23,6 +23,11 @@ spec:
           name: {{ include "hm-basic-webapp.prefix" . }}
           ports:
             - containerPort: {{ .Values.servicePort }}
+            {{- if .Values.metrics.enabled }}
+            - name: metrics
+              containerPort: {{ .Values.metrics.port }}
+              protocol: TCP
+            {{- end }}
           env:
             - name: K8S_POD_IP
               valueFrom:
