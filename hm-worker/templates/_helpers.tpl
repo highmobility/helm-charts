@@ -70,6 +70,10 @@ Create the name of the service account to use
 {{- printf "%s-%s" (include "hm-worker.fullname" .) "secret" -}}
 {{- end -}}
 
+{{/*
+Keep hm-worker for backward compatibility reason
+to be removed in the next major release
+*/}}
 {{- define "hm-worker.headlessServiceName" -}}
-{{- printf "%s-%s" (include "hm-worker.fullname" .) "nodes" -}}
+{{- printf "%s-hm-worker-%s" (include "hm-worker.fullname" .) "nodes" -}}
 {{- end -}}
