@@ -40,10 +40,16 @@ helm lint hm-basic-webapp
 ```
 4. Build zip file:
 ```
-helm package hm-basic-webapp/
+mkdir -p artifact-tmp
+helm package hm-basic-webapp --destination artifact-tmp 
 ```
 5. update the `index.yaml` file:
 ```
-helm repo index --url https://highmobility.github.io/helm-charts/ --merge index.yaml .
+helm repo index --url https://highmobility.github.io/helm-charts/ --merge index.yaml artifact-tmp
 ```
-6. Commit the zip file(s) and index.yaml and push to main
+6. Move the new files to the root dir
+```
+mv artifact-tmp/* ./
+rm -rf artifact-tmp
+```
+7. Commit the zip file(s) and index.yaml and push to main
