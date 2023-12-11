@@ -5,6 +5,7 @@
 ### Changed
 
 * Shorten the name of resouces by removing `hm-worker` at the end of each resource
+* only headless service name is left unchanged due to backward compatibility
 
 
 ## [1.3.1] - 2023-08-08
