@@ -22,6 +22,9 @@ ingress:
   annotations:
     kubernetes.io/ingress.class: nginx
 headlessService: false
+metrics:
+  enabled: false
+  port: 1234
 migration:
   enabled: false
 #  image:
