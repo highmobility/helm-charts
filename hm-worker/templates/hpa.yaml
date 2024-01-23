@@ -2,12 +2,12 @@
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: {{ include "hm-basic-webapp.prefix" . }}
+  name: {{ include "hm-worker.prefix" . }}
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: {{ include "hm-basic-webapp.prefix" . }}
+    name: {{ include "hm-worker.prefix" . }}
   minReplicas: {{ .Values.autoscaling.minReplicas }}
   maxReplicas: {{ .Values.autoscaling.maxReplicas }}
   {{- if .Values.autoscaling.targetCPUUtilizationPercentage }}
