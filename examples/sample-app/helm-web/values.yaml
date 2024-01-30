@@ -26,7 +26,7 @@ hm-basic-webapp:
     targetCPUUtilizationPercentage: 10
 
   worker:
-    enabled: true
+    enabled: false
     instances:
       - name: worker1
         replicas: 1
@@ -40,7 +40,7 @@ hm-basic-webapp:
           - worker.rb
 
   migration:
-    enabled: true
+    enabled: false
     image:
       repository: sample-migration
     command:
