@@ -1,13 +1,15 @@
 {{- if .Values.autoscaling.enabled }}
-apiVersion: autoscaling/v2beta1
+apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: {{ include "hm-basic-webapp.prefix" . }}
+  name: {{ include "hm-basic-webapp.fullname" . }}
+  labels:
+    {{- include "hm-basic-webapp.labels" . | nindent 4 }}
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: {{ include "hm-basic-webapp.prefix" . }}
+    name: {{ include "hm-basic-webapp.fullname" . }}
   minReplicas: {{ .Values.autoscaling.minReplicas }}
   maxReplicas: {{ .Values.autoscaling.maxReplicas }}
   metrics:
