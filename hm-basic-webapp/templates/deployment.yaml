@@ -19,7 +19,7 @@ spec:
       imagePullSecrets:
         {{- .Values.imagePullSecrets | toYaml | nindent 8 }}
       containers:
-        - image: "{{ .Values.image.repository }}:{{ .Values.ci.deploymentTag | default .Chart.AppVersion }}"
+        - image: "{{ .Values.image.repository }}:latest"
           name: {{ include "hm-basic-webapp.prefix" . }}
           ports:
             - containerPort: {{ .Values.servicePort }}

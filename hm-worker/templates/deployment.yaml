@@ -32,7 +32,7 @@ spec:
         - name: {{ include "hm-worker.fullname" . }}
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
-          image: "{{ .Values.image.repository }}:{{ .Values.ci.deploymentTag | default .Chart.AppVersion }}"
+          image: "{{ .Values.image.repository }}:latest"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - name: http
