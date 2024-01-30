@@ -14,7 +14,7 @@ hm-basic-webapp:
     targetCPUUtilizationPercentage: 40
 
   ci:
-    deploymentTag: foo
+    deploymentTag: latest
     deploymentMigrationTag: bar
 
   ingress:

@@ -5,7 +5,7 @@ hm-worker:
     - name: regcred
 
   ci:
-    deploymentTag: worker
+    deploymentTag: latest
 
   environmentName: develop
 
