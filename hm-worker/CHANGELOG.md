@@ -1,9 +1,5 @@
 # Changelog
 
-## [1.4.1] - 2024-01-22
-### Add
-
-* Upgrade HPA from v2beta1 to v2.
 
 ## [1.4.0] - 2023-12-08
 ### Changed
