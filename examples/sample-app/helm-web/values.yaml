@@ -1,7 +1,7 @@
 hm-basic-webapp:
   name: sample-app
   image:
-    repository: sample-app
+    repository: busybox
   servicePort: 80
   containerPort: 9292
   imagePullSecrets:
@@ -9,7 +9,7 @@ hm-basic-webapp:
   replicas: 1
 
   ci:
-    deploymentTag: foo
+    deploymentTag: latest
     deploymentMigrationTag: bar
 
   ingress:
@@ -18,6 +18,12 @@ hm-basic-webapp:
 
   headlessService: false
   environmentName: develop
+
+  autoscaling:
+    enabled: true
+    minReplicas: 1
+    maxReplicas: 5
+    targetCPUUtilizationPercentage: 10
 
   worker:
     enabled: true

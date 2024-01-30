@@ -1,11 +1,11 @@
 hm-worker:
   image:
-    repository: sample-app
+    repository: busybox
   imagePullSecrets:
     - name: regcred
 
   ci:
-    deploymentTag: worker
+    deploymentTag: latest
 
   environmentName: develop
 
@@ -14,6 +14,12 @@ hm-worker:
   metrics:
     enabled: false
     port: 2002
+
+  autoscaling:
+    enabled: true
+    minReplicas: 1
+    maxReplicas: 5
+    targetCPUUtilizationPercentage: 10
 
   migration:
     enabled: true
