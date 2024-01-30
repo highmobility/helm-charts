@@ -3,9 +3,9 @@ entries:
   hm-basic-webapp:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-01-30T15:03:02.308146+01:00"
+    created: "2024-01-30T15:04:00.56289+01:00"
     description: Web Server and Workers with optional ingress and ACME
-    digest: f3f8176f984a7966b978226664ab3dd4243f74bb5560ee93fa5bef419fd450d0
+    digest: ac889311aa50508e6e4b2e6c92ae5428b5bc1d7fd87d2fe9b8d65cf49b2bdcc1
     name: hm-basic-webapp
     type: application
     urls:
@@ -204,9 +204,9 @@ entries:
   hm-worker:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-01-30T15:03:02.308605+01:00"
+    created: "2024-01-30T15:04:00.563392+01:00"
     description: A Helm chart for running worker jobs without any HTTP service
-    digest: 834521d5f7315c7235d4653677b96577bc1d5b539b89dce6903187cd65d4e521
+    digest: b165aacf08661a1754f4ec4fc98d26cc2a20146c9f214481debaea4a44ff5f26
     name: hm-worker
     type: application
     urls:
@@ -292,4 +292,4 @@ entries:
     urls:
     - https://highmobility.github.io/helm-charts/hm-worker-0.1.0.tgz
     version: 0.1.0
-generated: "2024-01-30T15:03:02.307403+01:00"
+generated: "2024-01-30T15:04:00.561894+01:00"
