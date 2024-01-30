@@ -1,11 +1,11 @@
 hm-worker:
   image:
-    repository: sample-app
+    repository: busybox
   imagePullSecrets:
     - name: regcred
 
   ci:
-    deploymentTag: worker
+    deploymentTag: latest
 
   environmentName: develop
 
@@ -16,7 +16,7 @@ hm-worker:
     port: 2002
 
   migration:
-    enabled: true
+    enabled: false
     command:
       - ruby
       - migration.rb

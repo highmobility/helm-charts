@@ -1,7 +1,7 @@
 hm-basic-webapp:
   name: sample-app
   image:
-    repository: sample-app
+    repository: busybox
   servicePort: 80
   containerPort: 9292
   imagePullSecrets:
@@ -9,7 +9,7 @@ hm-basic-webapp:
   replicas: 1
 
   ci:
-    deploymentTag: foo
+    deploymentTag: latest
     deploymentMigrationTag: bar
 
   ingress:
@@ -20,7 +20,7 @@ hm-basic-webapp:
   environmentName: develop
 
   worker:
-    enabled: true
+    enabled: false
     instances:
       - name: worker1
         replicas: 1
@@ -34,7 +34,7 @@ hm-basic-webapp:
           - worker.rb
 
   migration:
-    enabled: true
+    enabled: false
     image:
       repository: sample-migration
     command:
