@@ -4,6 +4,9 @@ hm-basic-webapp:
     repository: sample-app
   servicePort: 80
   containerPort: 9292
+  serviceLabels:
+    service-discovery-name: 'sample-app'
+    foo: bar
   imagePullSecrets:
     - name: 'regcred'
   replicas: 1
