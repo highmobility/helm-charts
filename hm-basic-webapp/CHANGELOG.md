@@ -1,5 +1,10 @@
 # Changelog
 
+## [3.9.0] - 2022-12-08
+### Add
+* Option to set service labels.
+
+
 ## [3.8.0] - 2022-12-08
 ### Add
 
