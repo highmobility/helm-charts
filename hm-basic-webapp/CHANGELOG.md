@@ -5,7 +5,7 @@
 * Option to set service annotations.
 
 
-## [3.9.0] - 2022-12-08
+## [3.9.0] - 2024-03-06
 ### Add
 * Option to set service labels.
 
