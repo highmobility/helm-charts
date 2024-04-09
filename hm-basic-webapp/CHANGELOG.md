@@ -1,5 +1,10 @@
 # Changelog
 
+## [3.10.0] - 2024-04-09
+### Add
+* Option to set service annotations.
+
+
 ## [3.9.0] - 2022-12-08
 ### Add
 * Option to set service labels.
