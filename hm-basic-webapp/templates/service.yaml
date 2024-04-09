@@ -3,6 +3,7 @@ kind: Service
 metadata:
   name: {{ include "hm-basic-webapp.prefix" . }}
   labels: {{ toYaml .Values.serviceLabels | nindent 8 }}
+  annotations: {{ toYaml .Values.serviceAnnotations | nindent 8 }}
 spec:
   ports:
     - name: http

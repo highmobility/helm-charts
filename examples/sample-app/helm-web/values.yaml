@@ -7,6 +7,9 @@ hm-basic-webapp:
   serviceLabels:
     service-discovery-name: 'sample-app'
     foo: bar
+  serviceAnnotations:
+    some_key: 'some_value'
+    foo: bar
   imagePullSecrets:
     - name: 'regcred'
   replicas: 1
