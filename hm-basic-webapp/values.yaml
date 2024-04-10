@@ -11,6 +11,7 @@ ci:
 servicePort: 80
 containerPort: 8080
 serviceLabels: {}
+serviceAnnotations: {}
 imagePullSecrets:
   - name: 'regcred'
 replicas: 1
