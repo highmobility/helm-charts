@@ -2,8 +2,8 @@ apiVersion: v1
 kind: Service
 metadata:
   name: {{ include "hm-basic-webapp.prefix" . }}
-  labels: {{ toYaml .Values.serviceLabels | nindent 8 }}
-  annotations: {{ toYaml .Values.serviceAnnotations | nindent 8 }}
+  labels: {{ toYaml .Values.serviceLabels | nindent 4 }}
+  annotations: {{ toYaml .Values.serviceAnnotations | nindent 4 }}
 spec:
   ports:
     - name: http
