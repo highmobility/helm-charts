@@ -1,7 +1,7 @@
 {{- if .Values.ingress }}
 {{- if and .Values.ingress.enabled .Values.ingress.acme  }}
 {{- if not (eq .Values.environmentName "prod") }}
-apiVersion: cert-manager.io/v1alpha2
+apiVersion: cert-manager.io/v1
 kind: Issuer
 metadata:
  name: {{ include "hm-basic-webapp.letsEncryptStagingName" . }}
