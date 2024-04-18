@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.10.0] - 2024-04-09
+### Add
+* Option to set service annotations.
+
+## [3.9.0] - 2024-03-06
+### Add
+* Option to set service labels.
+
 ## [3.8.2] - 2024-01-22
 ### Fixed
 
@@ -14,7 +22,6 @@
 ### Add
 
 * Option to enable metrics port on deployment resource.
-
 
 ## [3.7.0] - 2022-08-25
 ### Add
