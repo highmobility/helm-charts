@@ -4,17 +4,24 @@
 ### Add
 * Option to set service annotations.
 
-
 ## [3.9.0] - 2024-03-06
 ### Add
 * Option to set service labels.
 
+## [3.8.2] - 2024-01-22
+### Fixed
+
+* Fixed previous version due to issues with HPA CPU target changes. V2 introduced the notion of usage as a number versus usage as a percentage. In 3.8.1 we had CPU target utilization as a number instead of usual percentage.
+
+## [3.8.1] - 2024-01-22
+### Add
+
+* Upgrade HPA from v2beta1 to v2.
 
 ## [3.8.0] - 2022-12-08
 ### Add
 
 * Option to enable metrics port on deployment resource.
-
 
 ## [3.7.0] - 2022-08-25
 ### Add

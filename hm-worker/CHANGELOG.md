@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.4.2] - 2024-01-22
+### Fixed
+
+* Fixed previous version due to issues with HPA CPU target changes. V2 introduced the notion of usage as a number versus usage as a percentage. In 1.4.1 we had CPU target utilization as a number instead of usual percentage.
+
+## [1.4.1] - 2024-01-22
+### Add
+
+* Upgrade HPA from v2beta1 to v2.
 
 ## [1.4.0] - 2023-12-08
 ### Changed
