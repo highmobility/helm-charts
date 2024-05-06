@@ -1,5 +1,9 @@
 # Changelog
 
+## [3.10.1] - 2024-04-17
+### Fix
+* Switch certmanager API version to v1
+
 ## [3.10.0] - 2024-04-09
 ### Add
 * Option to set service annotations.
