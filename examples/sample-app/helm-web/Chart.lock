@@ -1,6 +1,6 @@
 dependencies:
 - name: hm-basic-webapp
   repository: file://../../../hm-basic-webapp
-  version: 3.10.0
-digest: sha256:53ac375c63e33f2947f6565337344b3e5ff8e0e595a3c2cc0854a36772b194bd
-generated: "2024-04-09T14:04:26.389941+02:00"
+  version: 3.10.1
+digest: sha256:b23e0903f20dfaa439a716a1d2bb13d4ca03cdf13d449d82c5b428a63f2f7ffe
+generated: "2024-09-24T08:36:14.006075+02:00"
