@@ -1,4 +1,4 @@
-FROM ruby:3.1-alpine
+FROM ruby:3.3-alpine
 
 WORKDIR /app
 
@@ -8,4 +8,4 @@ COPY src/Gemfile.lock /app/Gemfile.lock
 RUN bundle install
 COPY src /app
 
-ENTRYPOINT /app/worker.sh
+CMD ["/app/worker.sh"]
