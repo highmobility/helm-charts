@@ -15,8 +15,8 @@ hm-basic-webapp:
   replicas: 1
 
   ci:
-    deploymentTag: foo
-    deploymentMigrationTag: bar
+    deploymentTag: web
+    deploymentMigrationTag: migration
 
   ingress:
     enabled: false
@@ -42,7 +42,7 @@ hm-basic-webapp:
   migration:
     enabled: true
     image:
-      repository: sample-migration
+      repository: sample-app
     command:
       - ruby
       - migration.rb
