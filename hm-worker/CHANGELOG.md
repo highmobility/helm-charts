@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.5.0] - 2025-02-05
+### Add
+
+* Set service account name on deployment
+
 ## [1.4.2] - 2024-01-22
 ### Fixed
 
