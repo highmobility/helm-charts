@@ -1,5 +1,9 @@
 # Changelog
 
+## [3.11.0] - 2025-02-20
+### Add
+* Use `spec.ingressClassName` instead of `kubernetes.io/ingress.class` deprecated annotation
+
 ## [3.10.1] - 2024-04-17
 ### Fix
 * Switch certmanager API version to v1
