@@ -1,5 +1,9 @@
 # Changelog
 
+## [3.12.0] - 2025-07-07
+### Breaking Changes
+* `hm-basic-webapp.ingress.PathType` is mandatory previously its defaulted to `Prefix`.
+
 ## [3.11.0] - 2025-02-20
 ### Add
 * Use `spec.ingressClassName` instead of `kubernetes.io/ingress.class` deprecated annotation
