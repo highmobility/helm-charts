@@ -20,6 +20,7 @@ ingress:
   acme: false
   acmeRegistrationEmail: nobody@localhost.local
   path: /
+#  pathType: ImplementationSpecific
   tlsSecretName: dev-localhost-local-tls
   ingressClassName: nginx
   annotations:
