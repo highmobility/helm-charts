@@ -254,6 +254,16 @@ entries:
   hm-worker:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2026-03-27T14:54:22.060480406+01:00"
+    description: A Helm chart for running worker jobs without any HTTP service
+    digest: b726b715321678a5f8068c731fbae2709a18070654abb289bcf31c7daebc0cf5
+    name: hm-worker
+    type: application
+    urls:
+    - https://highmobility.github.io/helm-charts/hm-worker-2.0.0.tgz
+    version: 2.0.0
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2025-02-05T15:36:39.972109+01:00"
     description: A Helm chart for running worker jobs without any HTTP service
     digest: 002a40a685a281a3f32a7d8eb93e7a78171a265dda93d6eaf0c3c6ecc0c95454
@@ -352,4 +362,4 @@ entries:
     urls:
     - https://highmobility.github.io/helm-charts/hm-worker-0.1.0.tgz
     version: 0.1.0
-generated: "2025-07-07T10:53:05.95947+02:00"
+generated: "2026-03-27T14:54:22.060181964+01:00"
