@@ -61,13 +61,8 @@ Create the name of the service account to use
 {{- end }}
 {{- end }}
 
-
 {{- define "hm-worker.configName" -}}
 {{- printf "%s-%s" (include "hm-worker.fullname" .) "config" -}}
-{{- end -}}
-
-{{- define "hm-worker.secretName" -}}
-{{- printf "%s-%s" (include "hm-worker.fullname" .) "secret" -}}
 {{- end -}}
 
 {{/*
