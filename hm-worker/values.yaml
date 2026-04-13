@@ -101,6 +101,3 @@ migration:
 #       - world
 
 configMapData: {}
-
-# The value encoded to base64 automatically
-secretData: {}
