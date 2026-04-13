@@ -1,6 +1,6 @@
 dependencies:
 - name: hm-worker
   repository: file://../../../hm-worker
-  version: 1.4.2
-digest: sha256:62dbf648051f6dc1588cb7d9aa49da3b23dce158fc6f68473e3d12006faaccc1
-generated: "2024-04-09T14:07:40.224174+02:00"
+  version: 2.0.0
+digest: sha256:6156ae057b5274ef276ed0cf3b4034fd731b4befbe79528838e0270b9abe8834
+generated: "2026-03-27T13:26:13.76703531+01:00"

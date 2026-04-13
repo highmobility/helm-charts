@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.0.0] - 2026-03-27
+### Add
+* Add support for Deployment Annotations
+
+### Changed
+* Deployment now has current timestamp as annotation to always trigger pod recreation
+
+### Removed
+* Secret creation
+
 ## [1.5.0] - 2025-02-05
 ### Add
 

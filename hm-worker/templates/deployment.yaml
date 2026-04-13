@@ -4,6 +4,10 @@ metadata:
   name: {{ include "hm-worker.fullname" . }}
   labels:
     {{- include "hm-worker.labels" . | nindent 4 }}
+  {{- with .Values.deploymentAnnotations }}
+  annotations:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
@@ -15,8 +19,9 @@ spec:
       {{- include "hm-worker.selectorLabels" . | nindent 6 }}
   template:
     metadata:
-      {{- with .Values.podAnnotations }}
       annotations:
+        date: {{ now }}
+      {{- with .Values.podAnnotations }}
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
@@ -46,27 +51,23 @@ spec:
               containerPort: {{ .Values.metrics.port }}
               protocol: TCP
             {{- end }}
+
           env:
             - name: K8S_POD_IP
               valueFrom:
                 fieldRef:
                   fieldPath: status.podIP
-            {{- $configName := include "hm-worker.configName" . -}}
-            {{- range $name, $_value := .Values.configMapData }}
-            - name: {{ $name }}
-              valueFrom:
-                configMapKeyRef:
-                  key: {{ $name }}
-                  name: {{ $configName }}
-            {{- end }}
-            {{- $secretName := include "hm-worker.secretName" . -}}
-            {{- range $name, $_value := .Values.secretData }}
-            - name: {{ $name }}
-              valueFrom:
-                secretKeyRef:
-                  key: {{ $name }}
-                  name: {{ $secretName }}
-            {{- end }}
+
+          envFrom:
+          {{- $configName := include "hm-worker.configName" . -}}
+          {{- if $configName }}
+            - configMapRef:
+                name: {{ $configName }}
+          {{- end }}
+          {{- if .Values.secretName }}
+            - secretRef:
+                name: {{ .Values.secretName }}
+          {{- end }}
 
           {{- with .Values.livenessProbe }}
           livenessProbe:
