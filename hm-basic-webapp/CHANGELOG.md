@@ -1,5 +1,9 @@
 # Changelog
 
+## [3.13.0] - 2026-07-14
+### Fixed
+* Use provided ingress class name on Let's Encrypt issuers
+
 ## [3.12.0] - 2025-07-07
 ### Breaking Changes
 * `hm-basic-webapp.ingress.PathType` is mandatory previously its defaulted to `Prefix`.
