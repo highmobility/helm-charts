@@ -1,5 +1,9 @@
 # Changelog
 
+## [3.13.1] - 2026-07-20
+### Fixed
+* Fix incorrect ingress class name key on issuer
+
 ## [3.13.0] - 2026-07-14
 ### Fixed
 * Use provided ingress class name on Let's Encrypt issuers
