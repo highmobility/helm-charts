@@ -35,3 +35,16 @@ ruby worker.rb
 ```sh
 ruby migration.rb
 ```
+
+## Minikube
+### Start
+```sh
+minikube start --driver kvm2
+```
+
+### Makes local images available on Minikube cluster
+```sh
+minikube image load sample-app:web
+minikube image load sample-app:worker
+minikube image load sample-app:migration
+```
