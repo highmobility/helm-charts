@@ -47,7 +47,7 @@ hm-basic-webapp:
       - ruby
       - migration.rb
 
-  secretName: sample-app
+  secretName: sample-app-secret
   deploymentAnnotations:
     foo: bar
     bar: baz
