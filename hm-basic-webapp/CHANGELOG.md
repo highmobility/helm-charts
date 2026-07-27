@@ -1,5 +1,15 @@
 # Changelog
 
+## [4.0.0] - 2026-08-01
+### Add
+* Add support for Deployment Annotations
+
+### Changed
+* Deployment now has current timestamp as annotation to always trigger pod recreation
+
+### Removed
+* Secret creation
+
 ## [3.13.1] - 2026-07-20
 ### Fixed
 * Fix incorrect ingress class name key on issuer
