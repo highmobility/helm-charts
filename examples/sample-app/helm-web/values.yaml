@@ -48,6 +48,9 @@ hm-basic-webapp:
       - migration.rb
 
   secretName: sample-app
+  deploymentAnnotations:
+    foo: bar
+    bar: baz
 
 ### Config Map
   configMapData:
