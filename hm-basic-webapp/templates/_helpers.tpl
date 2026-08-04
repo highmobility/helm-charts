@@ -8,10 +8,6 @@
 {{- printf "%s-%s-%s" .Values.environmentName .Values.name "config" -}}
 {{- end -}}
 
-{{- define "hm-basic-webapp.secretName" -}}
-{{- printf "%s-%s-%s" .Values.environmentName .Values.name "secret" -}}
-{{- end -}}
-
 {{- define "hm-basic-webapp.migrationsJobName" -}}
 {{- printf "%s-%s-%s" .Values.environmentName .Values.name "migrations-job" -}}
 {{- end -}}
